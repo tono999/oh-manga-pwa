@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Oh!Manga</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e1e2f">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <h1>Oh!Manga</h1>
+
+  <!-- Biblioteca -->
+  <section id="library" class="library">
+
+    <div class="manga-card" data-id="hxh">
+      <img src="mangas/hxh/1.jpg" alt="">
+      <h3>"Hunter x Hunter"</h3>
+    </div>
+
+    <div class="manga-card" data-id="jujutsu">
+      <img src="mangas/jujutsu/1.jpg" alt="">
+      <h3>"Jujutsu Kaisen"</h3>
+    </div>
+
+    <div class="manga-card" data-id="baki">
+      <img src="mangas/baki/1.jpg" alt="">
+      <h3>"Baki: Son of Ogre"</h3>
+    </div>
+
+  </section>
+
+  <!-- Lector -->
+  <section id="reader" class="reader hidden">
+
+    <header class="reader-header">
+      <button id="backBtn">← Biblioteca</button>
+      <span id="mangaTitle"></span>
+    </header>
+
+    <img id="pageImg" class="page" alt="">
+
+    <div class="reader-controls">
+      <button id="prevBtn">Anterior</button>
+      <span id="pageInfo"></span>
+      <button id="nextBtn">Siguiente</button>
+    </div>
+
+  </section>
+
+</div>
+
+<script src="app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js');
+}
+</script>
+
+</body>
+</html>

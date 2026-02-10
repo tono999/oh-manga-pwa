@@ -1,0 +1,96 @@
+body{
+  margin:0;
+  font-family: system-ui, Arial, sans-serif;
+  background:#0f1020;
+  color:#fff;
+}
+
+.app{
+  max-width:900px;
+  margin:auto;
+  padding:16px;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+/* Biblioteca */
+
+.library{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:16px;
+}
+
+.manga-card{
+  background:#1b1c2e;
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease;
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+.manga-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 25px rgba(0,0,0,.4);
+}
+
+.manga-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+}
+
+.manga-card h3{
+  margin:10px;
+  text-align:center;
+  font-size:16px;
+}
+
+/* Lector */
+
+.reader{
+  max-width:520px;
+  margin:0 auto;
+}
+
+.reader-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.page{
+  width:100%;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.4);
+}
+
+.reader-controls{
+  margin-top:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+button{
+  background:#4CAF50;
+  border:none;
+  padding:8px 14px;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+button:disabled{
+  opacity:.5;
+}
+
+.hidden{
+  display:none;
+}
