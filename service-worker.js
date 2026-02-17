@@ -18,5 +18,14 @@ const FILES = [
 
   "./mangas/baki/1.jpg",
   "./mangas/baki/2.jpg",
-  "./mangas/baki/3.jpg"
+  "./mangas/baki/3.jpg",
+
+  "./mangas/chainsaw/1.jpg",
+  "./mangas/chainsaw/2.jpg",
+  "./mangas/chainsaw/3.jpg",
+
+  "./mangas/kengan/1.jpg",
+  "./mangas/kengan/2.jpg",
+  "./mangas/kengan/3.jpg"
+
 ];

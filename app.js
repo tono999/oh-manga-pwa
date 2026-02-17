@@ -9,39 +9,76 @@ const backBtn = document.getElementById("backBtn");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
-let currentPages = [];
-let currentPageIndex = 0;
-let currentMangaId = null;
+/* =========================
+   Datos de mangas
+========================= */
 
 const mangas = {
   hxh: {
     title: "Hunter x Hunter",
+    tags: ["accion", "aventura", "estrategia", "peleas", "shonen"],
     pages: [
       "mangas/hxh/1.jpg",
       "mangas/hxh/2.jpg",
       "mangas/hxh/3.jpg"
     ]
   },
+
   jujutsu: {
     title: "Jujutsu Kaisen",
+    tags: ["accion", "oscuro", "maldiciones", "peleas", "shonen"],
     pages: [
       "mangas/jujutsu/1.jpg",
       "mangas/jujutsu/2.jpg",
       "mangas/jujutsu/3.jpg"
     ]
   },
+
   baki: {
     title: "Baki: Son of Ogre",
+    tags: ["artes marciales", "peleas", "fuerza", "torneos"],
     pages: [
       "mangas/baki/1.jpg",
       "mangas/baki/2.jpg",
       "mangas/baki/3.jpg"
     ]
+  },
+
+  kengan: {
+    title: "Kengan Ashura",
+    tags: ["artes marciales", "peleas", "torneos", "violento"],
+    pages: [
+      "mangas/kengan/1.jpg",
+      "mangas/kengan/2.jpg",
+      "mangas/kengan/3.jpg"
+    ]
+  },
+
+  chainsaw: {
+    title: "Chainsaw Man",
+    tags: ["accion", "demonios", "oscuro", "violento", "romance", "jovenes"],
+    pages: [
+      "mangas/chainsaw/1.jpg",
+      "mangas/chainsaw/2.jpg",
+      "mangas/chainsaw/3.jpg"
+    ]
   }
 };
 
+/* =========================
+   Lector
+========================= */
+
+let currentPages = [];
+let currentPageIndex = 0;
+
 function openManga(id){
-  currentMangaId = id;
+
+  if(!mangas[id] || mangas[id].pages.length === 0){
+    alert("Este manga solo está disponible como recomendación.");
+    return;
+  }
+
   currentPages = mangas[id].pages;
   currentPageIndex = 0;
 
@@ -85,3 +122,4 @@ document.querySelectorAll(".manga-card").forEach(card => {
     openManga(card.dataset.id);
   });
 });
+
