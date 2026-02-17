@@ -1,4 +1,4 @@
-const CACHE_NAME = "ohmanga-v2";
+const CACHE_NAME = "ohmanga-v3";
 
 const FILES = [
   "./",
